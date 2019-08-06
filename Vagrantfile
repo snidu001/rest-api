@@ -13,10 +13,8 @@ Vagrant.configure("2") do |config|
  # Every Vagrant development environment requires a box. You can search for
  # boxes at https://vagrantcloud.com/search.
  config.vm.box = "ubuntu/bionic64"
- #version 
  config.vm.box_version = "~> 20190314.0.0"
 
-#maps the port from local machine to the port at development server
  config.vm.network "forwarded_port", guest: 8000, host: 8000
 
  config.vm.provision "shell", inline: <<-SHELL
